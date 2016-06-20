@@ -9,7 +9,7 @@
             }
 
             div{
-                border-top: 2px dashed lightgray;            
+                border-bottom: 2px dashed lightgray;            
             }
 
 
@@ -28,18 +28,27 @@
              padding: 10px; 
             }
 
-            .title{=
+            .chapter-div{
+                border: 3px solid crimson;
+/*                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;*/
+                margin: 10px;
+                /*border-bottom: none;*/
+                /*border-bottom: 3px groove crimson;*/
+            }
+
+            .title{
                 color: lightcoral;
                 font-family: "Brush Script MT", Lucida Calligraphy, cursive;
                 text-align: center;
             }
 
             .para-title{
-                /*background-color: navy;*/
                 color: lightcoral;
                 font-family: "Brush Script MT", Lucida Calligraphy, cursive;
                 text-align: center;
-/*                border-top: 2px dashed lightgray;*/
+                /*border-top: 2px groove crimson;*/
                 padding: 10px;
             }
 
@@ -60,22 +69,7 @@
                 text-align: center;
                 color: forestgreen;
             }
-
-            #first-div{
-                border-top: none;
-            }
             
-/*            .paragraph{
-                font-family: "Palatino";
-                line-height: 1.5em;
-                color: royalblue;
-                text-indent: 5em;
-                margin-left: 30px;
-                margin-right: 30px;
-            }*/
-
-
-
             #pic-follow{
                 position: fixed;
                 right: 30px;
@@ -87,12 +81,6 @@
                 font-weight: bold;
                 color: red;
             }
-            
-
-            #randompic{
-                float:left;
-                width:300px;
-            }
 
             
             
@@ -100,7 +88,7 @@
     </head>
     <body>
 
-    <img id="pic-follow" src="https://lh3.googleusercontent.com/sTIQNNU4wO58xnU3af2tAkvr7XCwsXWlEvq7T4VAJjT4cPZHDFxnaDqc8Z2CbUNeEaQruDR9_QFUA7RYcj45t4mfnMv7iRgn-0Y85mAUv0JqzNWJCMVUZJKz758BngbWXhD99gVMl1ayNrsMiVHuGHyBj_7tkF3OWIPPubCkuoUE1c-AZcvtG1Dm_x0p3JPhI2RAXoT5XN6gPO4DE-1cJDKg2dA_qDMulhsimbNmeR5g5avCuxjoo9YvPOGrn5VVn7Bfuk2Ro_NrFduj8SX4_IH27ZLvrArIDQn7CXogBjudyxsCogrMomrN371MwQGlOpNRP_ozaEyT-Sw9lPZB4djmC8Uh6e3Acd7O9JytywE-NkBj86EYcDluvMqUumk8dkibFQCYH_RKEYD6S21XSPRZQmg3DVF_EDxexpMlYrus4pToEUBBAfq8j9G_8wcwZsqBUpMONue0Ar39nvdbAHY0TG6U2T5uPTRvN3j2wqHzQUBgVIe2FwEu66EShh31Xzeexvy6QJUQK9IvhxAcI0YY6mpPVjqRvtCHjFbYWE5ANUSeEQ7hjletZh_oc41M6UHqm_rZssjzYj14_PI9-yn_fVJE-ac=w636-h848-no" alt="Now Mimi follows us!">
+    <img id="pic-follow" src="https://lh3.googleusercontent.com/hYXsl_hfsYNMol292hO6G_S7mWeDg_rwtdV4vCPM--ppEMdWiLJ2jrjJk6rq4gR5H3jklnkDhWak1et1WK34bT5y1kOfpAlx63fxNRBIdTJKr8l3M6Z_2oNNuSKR4CnR942lnwR96tS1uLD8os-fScGpt64n7s52ARBgUNS-Yw-9OAXCTkAyu9doUiSPaBBh7HA76rRCg62JFvSRWS2IMkwLfqZWBPutjjlrM00VOPLOqOKYE4_rZ3flQ-iCDegRVzCBmm73sbSbihdBMjIV7pi1vWZwFZ4vc4p3zWrwPsBeezTBhcEV9fG24P1NVjD6cCdSQtx_ilVdUivn24Cyu8qAWyXpu6FWrxsf2ZQfx2c18RQjkdsTi2LqUEUNUjLs5TGKMu_KKT9obFidUHviMbdQk-CgXYAC3SBa6VhmanryRHAVzc5vzvjJzJMsmTZ4X62xjhTdD7L7EyAqNl113JYcSPjC3uxLn2dqLqaIOtqAA0YyHVxT17o2bKrOoFWBd7sjwP3syYa01Xa2cbnnJZkkL6y5SjTO5FzTcR4pebkjCjYBso1FKlf3jQDwDfjSFAcorKsVoubtA6FjJqn4fK0cmcUvcvI=w636-h848-no" alt="Now Mimi follows us!">
 
         
         <h1 class = "title">Story of Our Lives</h1>
@@ -109,45 +97,61 @@
 
         <h3 class = "title">Table of Contents</h3>
         <ul>
-            <li><a href= "#first-post">Chapter 1: Summer Internship</a></li>
+            <li><a href= "#first-post">Chapter 1: Thoughts</a></li>
             <br>
-            <li><a href= "#second-post">Chapter 2: Life Off Campus</a></li>
+            <li><a href= "#second-post">Chapter 2: The Summer Life</a></li>
             <br>
             <li><a href= "#third-post">Chapter 3: Nicole</a></li>
         </ul>
 
-
         </div>
 
-        <div id="first-div">        
-        <h2 class = "para-title" id="first-post">Summer Internship</h2>
-        <h6 class = "date">Posted on June 14th, 2016</h6>
-        
-        <p class="paragraph">Aqueti has been a pleasant surprise for me. Not only am I exposed to the startup environment, which is something that is totally new for me, I am also gaining a very good insight into the industry's view of computer science. I still have a <span id = "long">long</span> way to go, but hopefully this will lead to something good.</p>
-        </div>
-
+        <div class="chapter-div">
 
         <div>
-         <h2 id="second-post" class="para-title">Life Off Campus</h2>
+ 
+        <h2 class = "para-title" id="first-post">Thoughts</h2>
+
+        <h6 class = "date">Posted on June 20th, 2016</h6>
+        
+        <p>N/A</p>
+
+        </div>
+
+        </div>
+
+        <div class="chapter-div">
+
+        <div>
+         <h2 id="second-post" class="para-title">The Summer Life</h2>
+
+        <h6 class = "date">Posted on June 14th, 2016</h6>
+        
+        <p>Aqueti has been a pleasant surprise for me. Not only am I exposed to the startup environment, which is something that is totally new for me, I am also gaining a very good insight into the industry's view of computer science. I still have a <span id = "long">long</span> way to go, but hopefully this will lead to something good.</p>
+
+        </div>
+
+        <div>
         <h6 class="date">Posted on June 13th, 2016</h6>
         
-        <p class="paragraph">Life off campus has been one of the best parts of my new routine. Not only am I eating food that I really wanted to eat, I'm eating it for really cheap. </p>
+        <p>Life off campus has been one of the best parts of my new routine. Not only am I eating food that I really wanted to eat, I'm eating it for really cheap. </p>
         <img id="foodpic" src="http://images.edge-generalmills.com/34cbf30c-526c-43ad-8b6a-af8c793f84f6.jpg" alt="chicken breast!" width="600" align="center"><br>
-
-
-        <img id = "randompic" src="https://lh3.googleusercontent.com/FkAW1aNfUfIC1JvgM6QnXITVjFqhNLH-HzRrWAWb0mRyUHKJikgCJbdEZDFxGpDRBx82tOGZGsEZLbH1hxgcsWyjqysbE-azGAwPZ12rHhRg9l3cQHuvCmvdCzY9grMSnPZ3JeWZ_478PZ01KXN-qg-P-KovYnz5r_iy2881Z_T1gNd-iirU6t_VrjKCqVuR0IZBLC61Wmew303KUGlNy8Yys_AWFpCmO-Ca3amT9En94ZD7sO51G1BcveA4FEz4lhuC-ROOKbfH63b8vm1VFwTtyCRz_4zMq5eisqBA4MB0BGulYlTgB4M_dg7xCS_oyh-wYWdxSbP099v_-qHyLlomTGcViQcw5QqdAPz2NQWLomGt7aJFWr5AgeFhbB7rBqFnih9PLJRpVk9BOCCgqhH0n-DPcj9jTa7zIoM2a3D_7fJDPcKfwDKJ1uimYAik_ZfMcpTQbymowEpN4A3UEwbcquU20ko7KQmC9kwZ_gJheWRx7FqufLpIqxyO3Vnbi83LmP2UyRbOW4bINVw2JPY1XYyMJlGMGWPeBBSux_zEmq3zcy7JG3eXTMtSsIBxGhB9RucX7DBL24jAFeSY6qjc4o5LC4k=w898-h673-no" alt="rando pic for testing" width="600" align = "center">
 
         <p>My room is quite spacious, and the rent is mind-bogglingly low. This is actually quite awesome. I wish the blog would let me post pictures of my room, just so I can show how great it is, but oh well.</p>
 
         </div>
 
+        </div>
+
+        <div class="chapter-div">
+
         <div>
 
         
-                <h2 id="third-post" class="para-title">Nicole</h2>
+        <h2 id="third-post" class="para-title">Nicole</h2>
         <h6 class = "date">Posted on June 19th, 2016</h6>
         
-        <p class = "paragraph">Just got back from New York, the first time we've actually met in the Big Apple - if anyone still calls New York that. It was a magical time for sure, full of adventures and just as, if not more, rewarding.</p>
+        <p>Just got back from New York, the first time we've actually met in the Big Apple - if anyone still calls New York that. It was a magical time for sure, full of adventures and just as, if not more, rewarding.</p>
         <p>
         First we met up near her place and went to Times Square, more specifically the Disney shop. We initially wanted to pick up Stitch, but seeing how the Stitches were either too big or too ugly, we instead went for Nemo, who is now safely tucked up with Nicole. </p>
         <p>Then we headed to Central Park, where Nicole, being the <em>angel</em> that she is, opened up the picnic lunch that she prepared herself - a Nutella sandwich, plus a plethora of fruits. There we watched a little baby called Peter try to feed the pigeons. Our favorite part was when he said "Thank you Pretzel!" to the grandma who gave him the aforementioned bread, and when he just threw a whole large chunk of the pretzel onto the ground, instead of breaking it up into little pieces. </p>
@@ -168,10 +172,11 @@
 
         <h6 class = "date">Posted on June 10th, 2016</h6>
         
-        <p class = "paragraph">I miss Nicole. What more is there to say. Even as I am working on this project(it is <strong><em>12:19AM</em></strong>, for god's sake) she still has not returned from work. I know that I'm not the biggest fan of the Wall Street culture, but I should definitely be much more warm and supportive of her, seeing how much trouble she seems to be going through right now.<br>
+        <p>I miss Nicole. What more is there to say. Even as I am working on this project(it is <strong><em>12:19AM</em></strong>, for god's sake) she still has not returned from work. I know that I'm not the biggest fan of the Wall Street culture, but I should definitely be much more warm and supportive of her, seeing how much trouble she seems to be going through right now.<br>
         <img id="umfpic" src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12963376_975849275803702_7790394803778975521_n.jpg?oh=7261a8f08a41a3cd8d76b4075312626f&oe=57CC2390" alt="pics of Dartmouth for no reason!" width="600" align="center">
             
         </p>
+        </div>
         </div>
         
         
