@@ -30,6 +30,10 @@
             font-family: 'Rancho', cursive;
         }
 
+        .anchor{
+            width:50%;
+        }
+
         #page-title{
             text-align:center;
             margin-bottom:50px;
@@ -79,21 +83,22 @@
         #fb-icon{
             position: absolute;
             top: 500px;
-            left:30%;
+            left:0%;
             /*margin:auto;*/
         }
 
         #linkedin-icon{
             position: absolute;
             top: 500px;
-            left:40%;
-            /*margin:auto;*/
+            left:20%;
+            margin:auto;
+
         }
 
         #github-icon{
             position: absolute;
             top: 500px;
-            left:50%;
+            left:40%;
             /*margin:auto;*/
         }
 
@@ -107,8 +112,18 @@
         #dribble-icon{
             position: absolute;
             top: 500px;
-            left:70%;
+            left:80%;
             /*margin:auto;*/
+        }
+
+        img{
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2{
+            text-align: center;
         }
 
             
@@ -119,19 +134,16 @@
     <body>
         <h1 id="page-title">~/raysong/workspace</h1>
 
-        <div>
+        <div class="anchors">
         <h2 id= "one" class="toolbar"> About Me </h2>
-        </div>
 
-        <div>
-        <a href="./posts/thoughts.html"><h2 id="two" class="toolbar"> Thoughts </h2></a>
-        </div>
-
-        <div>
         <a href="./posts/summer.html"><h2 id="three" class="toolbar"> Summer Life </h2></a>
         </div>
 
-        <div>
+        <div class="anchors">
+
+        <a href="./posts/thoughts.html"><h2 id="two" class="toolbar"> Thoughts </h2></a>
+
         <a href = "./posts/nicole.html"><h2 id="four" class="toolbar"> Nicole </h2></a>
         </div>
 
@@ -140,7 +152,7 @@
             <a href="https://facebook.com/young.re.song"><img src="./icons/fb.png" alt ="link to Facebook" width="50"></a>
         </div>
         <div class = "icon" id="linkedin-icon">
-            <a href="https://linkedin.com/in/yrsong"><img src="./icons/linkedin.png" alt ="link to Facebook" width="50"></a>
+            <a href="https://linkedin.com/in/yrsong"><img align="center" id ="aaa" src="./icons/linkedin.png" alt ="link to Facebook" width="50"></a>
         </div>
         <div class = "icon" id="github-icon">
             <a href="https://github.com/yrsong15"><img src="./icons/github.png" alt ="link to Facebook" width="50"></a>
