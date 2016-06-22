@@ -3,20 +3,128 @@
     <head>
         <meta charset="utf-8">
         <title>Ray_Song/workspace</title>
-        <link rel="stylesheet" type="text/css" href="rayblog.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/pamelafox/69f97167ba32e3473cda/raw/336006010d620847f275b0bd25bbf7c665b2e1a1/hopper.css">
         
-
-<!--         <link href="https://fonts.googleapis.com/css?family=Gudea" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Gudea|Rancho" rel="stylesheet"> 
         <style>
+            body{
+                background-color: lavenderblush;
+                /*background-color: black;*/
+            }
+
+            div{
+                border-bottom: 3px dotted lightsteelblue;            
+            }
+
+
+            p{
+                /*font-family: 'Gudea', sans-serif;*/
+                line-height: 1.5em;
+                color: royalblue;
+                /*color: ivory;*/
+                text-indent: 5em;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+            img{
+                display: block;
+                margin: auto;
+                padding: 10px; 
+            }
+
+            ul{
+                line-height: 0.7em;
+            }
+
+            /***************Font Control*******************/
+            .title, .para-title, #intro-to-mimi, .date{
+                font-family: 'Rancho', cursive;
+
+            }
+
+            ul, p{
+                font-family: 'Gudea', sans-serif;
+            }
+            /***************Font Control*******************/
+
+            .chapter-div{
+                border: 3px solid crimson;
+                margin: 10px;
+                padding: 10px;
+                /*background-color: ivory;*/
+            }
+
+            .bottom-of-chapter{
+                border-bottom: none;
+            }
+
+
+            .title{
+                color: lightcoral;
+                /*font-family: 'Cutive Mono', monospace;*/
+                text-align: center;
+            }
+
+            .para-title{
+                color: lightcoral;
+                /*font-family: 'Cutive Mono', monospace;*/
+                text-align: center;
+                /*border-top: 2px groove crimson;*/
+                padding: 10px;
+                font-size: 2em;
+            }
+
+            .tab{
+                margin-left: 5em;
+            }
+
+            #top-of-page{
+                font-size: 4em;
+            }
+
+            #intro-to-mimi{
+                color: crimson;
+                /*font-family: 'Cutive Mono', monospace;*/
+            }
+
+            #table-of-contents{
+                /*border: 3px solid royalblue;*/
+/*                margin-left: 10px;
+                margin-right: 10px;*/
+                background-color:cornsilk;
+                width: 50%;
+                margin:auto;
+                border-bottom: none;
+                padding: 5px;
+
+
+            }
+            
+            .date{
+                /*font-family: 'Cutive Mono', monospace;*/
+                font-size: 1em;
+                text-align: center;
+                color: forestgreen;
+            }
+            
+            #pic-follow{
+                position: fixed;
+                right: 30px;
+                top: 10px;
+                width: 5%;
+            }
+
+            #long{
+                font-weight: bold;
+                color: red;
+            }
+
             
             
         </style>
     </head>
     <body>
-
-    <a href="oldindex.html"><img src="http://images.edge-generalmills.com/34cbf30c-526c-43ad-8b6a-af8c793f84f6.jpg" alt="chicken breast!" width="200"></a>
 
     <a href="#top-of-page"><img id="pic-follow" src="https://lh3.googleusercontent.com/hYXsl_hfsYNMol292hO6G_S7mWeDg_rwtdV4vCPM--ppEMdWiLJ2jrjJk6rq4gR5H3jklnkDhWak1et1WK34bT5y1kOfpAlx63fxNRBIdTJKr8l3M6Z_2oNNuSKR4CnR942lnwR96tS1uLD8os-fScGpt64n7s52ARBgUNS-Yw-9OAXCTkAyu9doUiSPaBBh7HA76rRCg62JFvSRWS2IMkwLfqZWBPutjjlrM00VOPLOqOKYE4_rZ3flQ-iCDegRVzCBmm73sbSbihdBMjIV7pi1vWZwFZ4vc4p3zWrwPsBeezTBhcEV9fG24P1NVjD6cCdSQtx_ilVdUivn24Cyu8qAWyXpu6FWrxsf2ZQfx2c18RQjkdsTi2LqUEUNUjLs5TGKMu_KKT9obFidUHviMbdQk-CgXYAC3SBa6VhmanryRHAVzc5vzvjJzJMsmTZ4X62xjhTdD7L7EyAqNl113JYcSPjC3uxLn2dqLqaIOtqAA0YyHVxT17o2bKrOoFWBd7sjwP3syYa01Xa2cbnnJZkkL6y5SjTO5FzTcR4pebkjCjYBso1FKlf3jQDwDfjSFAcorKsVoubtA6FjJqn4fK0cmcUvcvI=w636-h848-no" alt="Now Mimi follows us!"></a>
 
@@ -30,7 +138,9 @@
         <h3 class = "title">Table of Contents</h3>
         <ul>
             <li><a href= "#first-post">Chapter 1: Thoughts</a></li>
+            <br>
             <li><a href= "#second-post">Chapter 2: The Summer Life</a></li>
+            <br>
             <li><a href= "#third-post">Chapter 3: Nicole</a></li>
         </ul>
 
@@ -75,7 +185,7 @@
         <h6 class="date">Posted on June 13th, 2016</h6>
         
         <p>Life off campus has been one of the best parts of my new routine. Not only am I eating food that I really wanted to eat, I'm eating it for really cheap. </p>
-        <img id="foodpic" src="http://images.edge-generalmills.com/34cbf30c-526c-43ad-8b6a-af8c793f84f6.jpg" alt="chicken breast!" width="600"><br>
+        <img id="foodpic" src="http://images.edge-generalmills.com/34cbf30c-526c-43ad-8b6a-af8c793f84f6.jpg" alt="chicken breast!" width="600" align="center"><br>
 
         <p>My room is quite spacious, and the rent is mind-bogglingly low. This is actually quite awesome. I wish the blog would let me post pictures of my room, just so I can show how great it is, but oh well.</p>
 
@@ -104,7 +214,7 @@
 
 
 
-        <img id="cutepic" src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/13450024_1060699240666366_4103727556396907306_n.jpg?oh=f2bb09b3937ccc002c730645972dcb8f&oe=57E09903" alt="pics of Dartmouth for no reason!" width="600">
+        <img id="cutepic" src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/13450024_1060699240666366_4103727556396907306_n.jpg?oh=f2bb09b3937ccc002c730645972dcb8f&oe=57E09903" alt="pics of Dartmouth for no reason!" width="600" align="center">
 
         </div>
 
@@ -113,7 +223,7 @@
         <h6 class = "date">Posted on June 10th, 2016</h6>
         
         <p>I miss Nicole. What more is there to say. Even as I am working on this project(it is <strong><em>12:19AM</em></strong>, for god's sake) she still has not returned from work. I know that I'm not the biggest fan of the Wall Street culture, but I should definitely be much more warm and supportive of her, seeing how much trouble she seems to be going through right now.<br>
-        <img id="umfpic" src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12963376_975849275803702_7790394803778975521_n.jpg?oh=7261a8f08a41a3cd8d76b4075312626f&oe=57CC2390" alt="Pictures of us at UMF" width="600">
+        <img id="umfpic" src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12963376_975849275803702_7790394803778975521_n.jpg?oh=7261a8f08a41a3cd8d76b4075312626f&oe=57CC2390" alt="Pictures of us at UMF" width="600" align="center">
             
         </p>
         </div>
