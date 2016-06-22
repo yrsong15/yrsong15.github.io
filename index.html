@@ -30,8 +30,23 @@
             font-family: 'Rancho', cursive;
         }
 
-        .anchor{
+        h2{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .anchors{
             width:50%;
+        }
+
+        #left-anchor{
+            position: absolute;
+            left:0%;
+        }
+
+        #right-anchor{
+            position: absolute;
+            left:50%;
         }
 
         #page-title{
@@ -45,30 +60,6 @@
             margin-top:50px;
             width: 40%;
             font-size: 2em;
-        }
-
-        #one{
-            position:absolute;
-            top: 10%;
-            left: 30%;
-        }
-
-        #two{
-            position:absolute;
-            top: 10%;
-            left: 60%
-        }
-
-        #three{
-            position:absolute;
-            top: 30%;
-            left:30%;
-        }
-
-        #four{
-            position:absolute;
-            top: 30%;
-            left: 60%;
         }
 
 
@@ -122,9 +113,6 @@
             margin-right: auto;
         }
 
-        h2{
-            text-align: center;
-        }
 
             
         </style>
@@ -134,16 +122,13 @@
     <body>
         <h1 id="page-title">~/raysong/workspace</h1>
 
-        <div class="anchors">
+        <div class="anchors" id="left-anchor">
         <h2 id= "one" class="toolbar"> About Me </h2>
-
         <a href="./posts/summer.html"><h2 id="three" class="toolbar"> Summer Life </h2></a>
         </div>
 
-        <div class="anchors">
-
+        <div class="anchors" id="right-anchor">
         <a href="./posts/thoughts.html"><h2 id="two" class="toolbar"> Thoughts </h2></a>
-
         <a href = "./posts/nicole.html"><h2 id="four" class="toolbar"> Nicole </h2></a>
         </div>
 
