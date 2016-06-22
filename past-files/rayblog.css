@@ -78,10 +78,6 @@ body{
             #intro-to-mimi{
                 color: crimson;
                 font-size: 1em;
-
-                border-bottom: 2px dashed lightgray;
-                padding-top: 5px;
-                padding-bottom: 50px;
                 /*font-family: 'Cutive Mono', monospace;*/
             }
 
