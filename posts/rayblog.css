@@ -4,7 +4,7 @@
             }
 
             div{
-                border-bottom: 3px dotted lightsteelblue;            
+                border-bottom: 3px dotted rgb(167, 219, 216);          
             }
 
 
@@ -76,7 +76,7 @@
                 color: rgb(224, 228, 204);
                 font-size: 1em;
 
-                border-bottom: 2px dashed lightgray;
+                border-bottom: 2px dashed rgb(167, 219, 216);;
                 padding-top: 5px;
                 padding-bottom: 50px;
                 /*font-family: 'Cutive Mono', monospace;*/
