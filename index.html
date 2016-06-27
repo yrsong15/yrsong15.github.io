@@ -2,172 +2,78 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-   
-
-
-        <title>Ray Song</title>
-        <link href="https://fonts.googleapis.com/css?family=Gudea|Rancho" rel="stylesheet"> 
-        <!-- Bootstrap -->
-        <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-social.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
+        <title>365 Days of Nicole</title>
+        <link href="https://fonts.googleapis.com/css?family=Gudea|Indie+Flower|Roboto" rel="stylesheet">
+        <link rel="shortcut icon" href="./images/favicon.ico" />
         <style>
-        body{
-            /*sand*/
-            background-color: rgb(224,228,204);
-            color: rgb(250, 105, 0);
-            font-family: 'Rancho', cursive;
-        }
 
-        h2{
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
+        body{
+
+            /*powerpuff*/
+            background-color: rgb(236, 229, 206);
+
+            /*creme*/
+            /*background-color: rgb(241, 212, 175);*/
+
+            /*chocolate*/
+            /*background-color: rgb(119, 79, 56);*/ 
         }
 
         img{
-            display:block;
+            margin-top: 30px;
+            display: block;
             margin-left: auto;
             margin-right: auto;
+            height: 650px;
+            padding-bottom: 30px;
         }
 
-        a{
-            /*dark orange*/
-            color: rgb(250, 105, 0);
+        #coverpic-container{
+            background-color: rgb(224, 142, 121);
+            width: 800px;
+            /*height: 1000px;*/
+            margin: 0 auto;
         }
 
-        a:hover{
-            /*light orange*/
-            color: rgb(243, 134, 48);
+        audio{
+            position: fixed;
+            top: 95%;
+            left: 70%;
         }
-
-        /*a:visited{*/
-            /*light blue*/
-            /*color: rgb(167, 219, 216);*/
-
-            /*rgb(105, 210, 231); // dark blue */
-        /*}*/
-
-        .anchors{
-            width:50%;
+        p{
+            padding-top: 20px;
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+            color: rgb(197, 224, 220);
+/*            font-family: 'Gudea', sans-serif;
+            font-family: 'Roboto', sans-serif;*/
         }
-
-        #left-anchor{
-            position: absolute;
-            left:0%;
+        strong{
+            font-size: 1.5em;
         }
-
-        #right-anchor{
-            position: absolute;
-            left:50%;
-        }
-
-        #page-title{
-            text-align:center;
-            margin-bottom:50px;
-            font-size: 3em;
-
-        }
-
-        .toolbar{
-            margin-top:50px;
-            width: 40%;
-            font-size: 2em;
-        }
-
-
-        .icon{
-            width:15%;
-            margin-right: 10px;
-            padding-right: 10px;
-            padding-left: 10px;
-
-        }
-
-        #resume-icon{
-            position: absolute;
-            top: 500px;
-            left:0%;
-            /*margin:auto;*/
-        }
-
-        #linkedin-icon{
-            position: absolute;
-            top: 500px;
-            left:20%;
-            margin:auto;
-
-        }
-
-        #github-icon{
-            position: absolute;
-            top: 500px;
-            left:40%;
-            /*margin:auto;*/
-        }
-
-        #medium-icon{
-            position: absolute;
-            top: 500px;
-            left:60%;
-            /*margin:auto;*/
-        }
-
-        #email-icon{
-            position: absolute;
-            top: 500px;
-            left:80%;
-            /*margin:auto;*/
-        }  
-
-
+            
 
             
+            
         </style>
-        
-        
     </head>
     <body>
-        <h1 id="page-title">~/raysong/workspace</h1>
+        <!-- <a href= -->
+        <audio controls autoplay>
+            <!-- <source src="./bgm/heavensdoor.mp3"> -->
+            <source src="./bgm/standbyyou.mp3">
+        </audio>
 
-        <div class="anchors" id="left-anchor">
-        <a href="./posts/me.html"><h2 id= "one" class="toolbar"> Me </h2></a>
-        <a href="./posts/tech.html"><h2 id="three" class="toolbar"> Tech </h2></a>
+        <div id="coverpic-container">
+            <p>
+                <strong>July 15th, 2015.</strong> A boy met a girl.<br>
+                Here's what happened.
+            </p>
+        <a href="main.html" target="_blank"><img id="coverpic" src="./images/umfpic.jpg" alt="cover picture for anniv site"></a>
         </div>
 
-        <div class="anchors" id="right-anchor">
-        <a href="./posts/thoughts.html"><h2 id="two" class="toolbar"> Thoughts </h2></a>
-        <a href = "./posts/journeys.html"><h2 id="four" class="toolbar"> Journeys </h2></a>
-        </div>
-
-
-        <div class = "icon" id="resume-icon">
-            <a href="https://facebook.com/young.re.song"><img src="./icons/diploma.png" alt ="link to Resume" width="50"></a>
-        </div>
-        <div class = "icon" id="linkedin-icon">
-            <a href="https://linkedin.com/in/yrsong"><img align="center" id ="aaa" src="./icons/linkedin.png" alt ="link to linkedin" width="50"></a>
-        </div>
-        <div class = "icon" id="github-icon">
-            <a href="https://github.com/yrsong15"><img src="./icons/github.png" alt ="link to github" width="50"></a>
-        </div>
-        <div class = "icon" id="medium-icon">
-            <a href="https://medium.com/@yrsong"><img src="./icons/pencil.png" alt ="link to medium" width="50"></a>
-        </div>
-        <div class = "icon" id="email-icon">
-            <a href="./posts/contacts.html"><img src="./icons/email.png" alt ="link to contacts" width="50"></a>
-        </div>
+    
+        
+        
     </body>
 </html>
