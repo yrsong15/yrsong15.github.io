@@ -4,14 +4,16 @@
             }
 
             div{
-                border-bottom: 3px dotted rgb(167, 219, 216);          
+                /*border-bottom: 3px dotted rgb(167, 219, 216);          */
+                border-bottom: 3px dotted rgb(243, 134, 48);  
             }
 
 
             p{
                 /*font-family: 'Gudea', sans-serif;*/
                 line-height: 1.5em;
-                color: rgb(243, 134, 48);
+                /*color: rgb(243, 134, 48);*/
+                color: rgb(119, 79, 56);
                 text-indent: 5em;
                 margin-left: 10%;
                 margin-right: 10%;

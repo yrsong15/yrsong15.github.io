@@ -5,7 +5,8 @@ body{
         }
 
         p{
-            color: rgb(243, 134, 48);
+            /*color: rgb(243, 134, 48);*/
+            color: rgb(119, 79, 56);
             font-family: 'Gudea', sans-serif;
             text-indent: 5em;
             /*text-align: center;*/
