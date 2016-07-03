@@ -1,21 +1,25 @@
-body{
-                background-color: lavenderblush;
-                /*background-color: black;*/
+            body{
+                /*background-color: rgb(167, 219, 216);*/
+                /*background-color: rgb(224, 228, 204);*/
             }
 
-            div{
-                border-bottom: 3px dotted lightsteelblue;            
+            .line{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-top: dotted 3px rgb(241, 212, 175);
+            margin-left: 25%;
+            margin-right: 25%;
             }
 
 
             p{
                 /*font-family: 'Gudea', sans-serif;*/
                 line-height: 1.5em;
-                color: royalblue;
-                /*color: ivory;*/
+                /*color: rgb(243, 134, 48);*/
+                /*color: rgb(119, 79, 56);*/
                 text-indent: 5em;
-                margin-left: 30px;
-                margin-right: 30px;
+                margin-left: 10%;
+                margin-right: 10%;
             }
 
             img{
@@ -26,6 +30,11 @@ body{
 
             ul{
                 line-height: 1.5em;
+            }
+
+            strong{
+                font-weight: bold;
+                color: rgb(250, 105, 0);
             }
 
             /***************Font Control*******************/
@@ -44,7 +53,6 @@ body{
                 border: 3px solid crimson;
                 margin: 10px;
                 padding: 10px;
-                /*background-color: ivory;*/
             }
 
             .bottom-of-chapter{
@@ -53,16 +61,13 @@ body{
 
 
             .title{
-                color: lightcoral;
-                /*font-family: 'Cutive Mono', monospace;*/
+                color: rgb(250, 105, 0);
                 text-align: center;
             }
 
             .para-title{
-                color: lightcoral;
-                /*font-family: 'Cutive Mono', monospace;*/
+                color: rgb(250, 105, 0);
                 text-align: center;
-                /*border-top: 2px groove crimson;*/
                 padding: 10px;
                 font-size: 2em;
             }
@@ -76,13 +81,12 @@ body{
             }
 
             #intro-to-mimi{
-                color: crimson;
+                color: rgb(105, 210, 231);
                 font-size: 1em;
 
-                border-bottom: 2px dashed lightgray;
+                border-bottom: 2px dashed rgb(167, 219, 216);
                 padding-top: 5px;
                 padding-bottom: 50px;
-                /*font-family: 'Cutive Mono', monospace;*/
             }
 
             #table-of-contents{
@@ -98,17 +102,12 @@ body{
                 /*font-family: 'Cutive Mono', monospace;*/
                 font-size: 1em;
                 text-align: center;
-                color: forestgreen;
+                color: rgb(105, 210, 231);
             }
             
             #pic-follow{
                 position: fixed;
-                right: 30px;
-                top: 10px;
-                width: 5%;
-            }
-
-            #long{
-                font-weight: bold;
-                color: red;
+                right: 1%;
+                top: 1%;
+                width: 3%;
             }

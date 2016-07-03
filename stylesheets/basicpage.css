@@ -1,12 +1,12 @@
 body{
-            background-color: rgb(224, 228, 204);
-            color: rgb(250, 105, 0);
+            /*background-color: rgb(224, 228, 204);*/
+            /*color: rgb(250, 105, 0);*/
             font-family: 'Rancho', cursive;
         }
 
         p{
             /*color: rgb(243, 134, 48);*/
-            color: rgb(119, 79, 56);
+            /*color: rgb(119, 79, 56);*/
             font-family: 'Gudea', sans-serif;
             text-indent: 5em;
             /*text-align: center;*/
@@ -24,12 +24,12 @@ body{
         }
 
         a:hover{
-            color: rgb(243, 134, 48);
+            color: rgb(105, 210, 231);
         }
 
 
-
         #page-title{
+            color: rgb(250, 105, 0);
             text-align:center;
             margin-bottom:50px;
             font-size: 3em;
