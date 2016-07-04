@@ -1,14 +1,15 @@
-body{
+        body{
             /*background-color: rgb(224, 228, 204);*/
             /*color: rgb(250, 105, 0);*/
             font-family: 'Rancho', cursive;
+            margin-bottom: 100px;
         }
 
         p{
             /*color: rgb(243, 134, 48);*/
             /*color: rgb(119, 79, 56);*/
             font-family: 'Gudea', sans-serif;
-            text-indent: 5em;
+            text-indent: 3em;
             /*text-align: center;*/
             margin-right: 10%;
             margin-left: 10%;
