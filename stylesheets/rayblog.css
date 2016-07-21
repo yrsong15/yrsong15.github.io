@@ -38,6 +38,16 @@
                 color: rgb(250, 105, 0);
             }
 
+            a{
+                color: rgb(250, 105, 0);
+                /*text-decoration: none;*/
+            }
+
+            a:hover{
+                color: rgb(105, 210, 231);
+                /*text-decoration: none;*/
+            }
+
             /***************Font Control*******************/
             .title, .para-title, #intro-to-mimi, .date{
                 font-family: 'Rancho', cursive;
