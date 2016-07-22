@@ -60,11 +60,6 @@
 
             ul.topnav li.right {float: right;}
 
-            @media screen and (max-width: 600px){
-                ul.topnav li.right, 
-                ul.topnav li {float: none;}
-            }
-
 /*            header{
                 position: fixed;
                 background-color: rgb(243,134,48);
@@ -90,7 +85,7 @@
 
             p{
                 line-height: 1.5em;
-                text-indent: 5em;
+                text-indent: 4em;
                 margin-left: 10%;
                 margin-right: 10%;
                 margin-bottom: 15px;
@@ -147,4 +142,19 @@
                 right: 1%;
                 top: 1%;
                 width: 3%;
+            }
+
+            @media screen and (max-width: 600px){
+                ul.topnav li.right, 
+                ul.topnav li {float: none;}
+
+                p{
+                    text-indent: 2em;
+
+                }
+                .title{
+                    padding-top: 300px;
+                }
+
+                
             }
