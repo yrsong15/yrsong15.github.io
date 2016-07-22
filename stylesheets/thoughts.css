@@ -14,7 +14,7 @@
 
             }
 
-            ul, p{
+            p{
                 font-family: 'Gudea', sans-serif;
             }
             /***************Font Control*******************/
@@ -27,7 +27,45 @@
                 margin-right: 25%;
             }
 
-            header{
+            
+            ul{
+                position: fixed;
+                top: 0;
+                width: 100%;
+                font-family: 'Rancho', cursive;
+                font-size: 1.5em;
+            }
+
+            ul.topnav {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(243,134,48);
+            }
+
+            ul.topnav li {float: left;}
+
+            ul.topnav li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            ul.topnav li a:hover:not(.active) {color: rgb(105, 210, 231);}
+
+            ul.topnav li a.active {color: rgb(105, 210, 231);}
+
+            ul.topnav li.right {float: right;}
+
+            @media screen and (max-width: 600px){
+                ul.topnav li.right, 
+                ul.topnav li {float: none;}
+            }
+
+/*            header{
                 position: fixed;
                 background-color: rgb(243,134,48);
                 color: white;
@@ -48,7 +86,7 @@
                 font-family: 'Rancho', cursive;
                 font-size: 1.7em;
 
-            }
+            }*/
 
             p{
                 line-height: 1.5em;
