@@ -4,35 +4,40 @@
         <<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<!--         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
 
         <title>Ray Song</title>
         <link href="https://fonts.googleapis.com/css?family=Gudea|Rancho" rel="stylesheet">
-        <link rel="shortcut icon" href="../icons/favicon.ico" /> 
+        <link rel="shortcut icon" href="../icons/favicon.ico"> 
         <style>
 
         body{
             color: rgb(243,134,48);
+            margin-left: auto;
             margin-top: 20px;
             margin-bottom: 30px;
             font-family: 'Rancho', cursive;
         }
 
-        div.img {
-            margin: 10px;
+        div.box {
+            display: inline-box;
+            margin: auto;
+            margin-left: 30px;
+            margin-bottom: 15px;
             border: 1px solid rgb(167,219,216);
             float: left;
             width: 300px;
+            height: 460px;
         }
 
-        div.img:hover {
+        div.box:hover {
             border: 1px solid rgb(105,210,231);
         }
 
-        div.img img {
+        div.box img {
             width: 100%;
-            height: auto;
+            height: 410px;
         }
 
         div.desc {
@@ -48,11 +53,16 @@
             margin-bottom:50px;
             font-size: 3em;
             font-weight: normal;
+            text-decoration: none;
 
         }
 
         #page-title:hover{
           color: rgb(105, 210, 231);
+        }
+
+        a{
+            text-decoration: none;
         }
 
         a:hover{
@@ -64,83 +74,67 @@
     <body>
         <a href="../index.html"><h1 id="page-title">~/raysong/workspace/journeys</h1></a>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img">
+                <div class="box">
                   <a href="first.html">
-                  <img src="../images/newyork.jpg" alt="NYC" width="600" height="400">
+                  <img src="../images/newyork.jpg" alt="NYC">
                   </a>
                   <div class="desc">New York - Summer 2016</div>
                 </div>
-            </div>
 
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img"
+
+                <div class="box">
                 <a href="sem1.html">
-                  <img src="http://yrsong.com/Ray-Meets-Nicole/images/summer-vermont.jpg" alt="Dartmouth" width="600" height="400">
+                  <img src="http://yrsong.com/Ray-Meets-Nicole/images/summer-vermont.jpg" alt="Dartmouth">
                 </a>
                 <div class="desc">Dartmouth</div>
               </div>
-            </div>
+ 
 
 
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                  <div class="img">
+                  <div class="box">
                   <a href="winter.html">
-                    <img src="../images/puertorico.jpg" alt="Rico" width="600" height="400">
+                    <img src="../images/puertorico.jpg" alt="Rico">
                   </a>
                   <div class="desc">Puerto Rico - Summer 2016</div>
                 </div>
-            </div>
+   
 
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img">
+          
+              <div class="box">
                 <a href="future.html">
-                  <img src="../images/myrtle.jpg" alt="Myrtle" width="600" height="400">
+                  <img src="../images/myrtle.jpg" alt="Myrtle">
                 </a>
                 <div class="desc">Myrtle Beach - Summer 2016</div>
               </div>
-            </div>
+          
 
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img">
+           
+              <div class="box">
                 <a href="sem2.html">
-                  <img src="http://yrsong.com/Ray-Meets-Nicole/images/umfpic.jpg" alt="Miami" width="600" height="400">
+                  <img src="http://yrsong.com/Ray-Meets-Nicole/images/umfpic.jpg" alt="Miami">
                 </a>
                 <div class="desc">Miami - Spring 2016</div>
               </div>
-            </div>
+        
 
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img">
+         
+                <div class="box">
                 <a href="summer.html">
-                <img src="http://yrsong.com/Ray-Meets-Nicole/images/sem1-bostonsky.jpg" alt="Boston" width="600" height="400">
+                <img src="http://yrsong.com/Ray-Meets-Nicole/images/sem1-bostonsky.jpg" alt="Boston">
               </a>
               <div class="desc">Boston - Fall 2015</div>
               </div>
-           </div>
+    
 
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                    <div class="img">
+
+          
+                  <div class="box">
                   <a href="summer.html">
-                    <img src="http://yrsong.com/Ray-Meets-Nicole/images/winter-lights.jpg" alt="Korea" width="600" height="400">
+                    <img src="http://yrsong.com/Ray-Meets-Nicole/images/winter-lights.jpg" alt="Korea">
                   </a>
                   <div class="desc">Korea</div>
                 </div> 
-            </div>
-          </div>
-        </div>
-
+         
 
 <!--         <div class="img">
           <a href="first.html">
