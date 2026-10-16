@@ -1,135 +1,264 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <<meta charset="utf-8">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
         <title>Ray Song</title>
-        <link href="https://fonts.googleapis.com/css?family=Gudea|Rancho" rel="stylesheet">
-        <link rel="shortcut icon" href="../icons/favicon.ico" /> 
+        <link href="https://fonts.googleapis.com/css?family=Gudea:400,700|Rancho" rel="stylesheet">
+        <link rel="shortcut icon" href="../icons/favicon.ico" />
         <style>
 
-        body{
-            color: rgb(243,134,48);
-            margin-top: 20px;
-            margin-bottom: 30px;
-            font-family: 'Rancho', cursive;
+        *, *::before, *::after {
+            box-sizing: border-box;
         }
 
-        div.img {
-            margin: 10px;
-            border: 1px solid rgb(167,219,216);
-            float: left;
-            width: 300px;
+        body {
+            margin: 0;
+            background: rgb(250, 250, 250);
+            color: rgb(38, 38, 38);
+            font-family: 'Gudea', sans-serif;
         }
 
-        div.img:hover {
-            border: 1px solid rgb(105,210,231);
-        }
-
-        div.img img {
-            width: 100%;
-            height: auto;
-        }
-
-        div.desc {
-            font-weight: bold;
-            font-size: 1.2em;
-            padding: 15px;
-            text-align: center;
-        }
-
-        #page-title{
-            color: rgb(250, 105, 0);
-            text-align:center;
-            margin-bottom:50px;
-            font-size: 3em;
-            font-weight: normal;
-
-        }
-
-        #page-title:hover{
-          color: rgb(105, 210, 231);
-        }
-
-        a:hover{
+        a {
+            color: inherit;
             text-decoration: none;
+        }
+
+        /* Top bar */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: white;
+            border-bottom: 1px solid rgb(219, 219, 219);
+            text-align: center;
+            padding: 10px 16px;
+        }
+
+        #page-title {
+            margin: 0;
+            color: rgb(250, 105, 0);
+            font-family: 'Rancho', cursive;
+            font-size: 2em;
+            font-weight: normal;
+        }
+
+        #page-title:hover {
+            color: rgb(105, 210, 231);
+        }
+
+        /* Feed */
+        .feed {
+            max-width: 470px;
+            margin: 0 auto;
+            padding: 24px 0 60px;
+        }
+
+        .post {
+            background: white;
+            border: 1px solid rgb(219, 219, 219);
+            border-radius: 8px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            padding: 2px;
+            background: linear-gradient(45deg, rgb(250, 105, 0), rgb(243, 134, 48), rgb(105, 210, 231));
+            flex-shrink: 0;
+        }
+
+        .avatar img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+        }
+
+        .username {
+            font-weight: bold;
+            font-size: 0.95em;
+            line-height: 1.2;
+        }
+
+        .location {
+            font-size: 0.8em;
+            color: rgb(115, 115, 115);
+        }
+
+        .post-photo {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            background: rgb(239, 239, 239);
+        }
+
+        .post-photo.landscape {
+            aspect-ratio: 4 / 3;
+        }
+
+        .post-body {
+            padding: 10px 14px 14px;
+            font-size: 0.95em;
+        }
+
+        .caption {
+            margin: 0 0 6px;
+        }
+
+        .caption .username {
+            margin-right: 6px;
+        }
+
+        .date {
+            font-size: 0.75em;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: rgb(105, 210, 231);
+        }
+
+        @media (max-width: 500px) {
+            .feed {
+                padding-top: 0;
+            }
+
+            .post {
+                border-left: none;
+                border-right: none;
+                border-radius: 0;
+                margin-bottom: 12px;
+            }
         }
 
         </style>
     </head>
     <body>
-        <a href="../index.html"><h1 id="page-title">~/raysong/workspace/journeys</h1></a>
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img">
-                  <img src="../images/cherrysprings.jpg" alt="Cherry Springs" width="600" height="400">
-                  <div class="desc">Cherry Springs - Winter 2017</div>
+        <header class="topbar">
+            <a href="../index.html"><h1 id="page-title">~/youngresong/workspace/journeys</h1></a>
+        </header>
+
+        <main class="feed">
+
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar"><img src="../images/mepic.jpg" alt=""></div>
+                    <div>
+                        <div class="username">youngresong</div>
+                        <div class="location">Cherry Springs, PA</div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img">
-                  <img src="../images/la.jpg" alt="LA" width="600" height="400">
-                <div class="desc">LA - Fall 2017</div>
-              </div>
-            </div>
-
-
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                  <div class="img">
-                    <img src="../images/philly.jpg" alt="Philly" width="600" height="400">
-                  <div class="desc">Philadelphia - Summer 2017</div>
+                <img class="post-photo" src="../images/cherrysprings.jpg" alt="Cherry Springs" loading="lazy">
+                <div class="post-body">
+                    <p class="caption"><span class="username">youngresong</span>Cherry Springs</p>
+                    <div class="date">Winter 2017</div>
                 </div>
-            </div>
+            </article>
 
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img">
-                  <img src="../images/quebec.jpg" alt="Quebec" width="600" height="400">
-                  <div class="desc">Quebec - Summer 2017</div>
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar"><img src="../images/mepic.jpg" alt=""></div>
+                    <div>
+                        <div class="username">youngresong</div>
+                        <div class="location">Los Angeles, CA</div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img">
-                  <img src="../images/asheville.jpg" alt="Asheville" width="600" height="400">
-                <div class="desc">Asheville - Spring 2017</div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="row">
-
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                <div class="img">
-                  <img src="../images/myrtle.jpg" alt="Myrtle" width="600" height="400">
-                <div class="desc">Myrtle Beach - Summer 2016</div>
-              </div>
-            </div>
-
-
-            <div class="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-4">
-                  <div class="img">
-                    <img src="../images/puertorico.jpg" alt="Rico" width="600" height="400">
-                  <div class="desc">Puerto Rico - Summer 2016</div>
+                <img class="post-photo" src="../images/la.jpg" alt="LA" loading="lazy">
+                <div class="post-body">
+                    <p class="caption"><span class="username">youngresong</span>LA</p>
+                    <div class="date">Fall 2017</div>
                 </div>
-            </div>
+            </article>
 
-          </div>
-        </div>
-     
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar"><img src="../images/mepic.jpg" alt=""></div>
+                    <div>
+                        <div class="username">youngresong</div>
+                        <div class="location">Philadelphia, PA</div>
+                    </div>
+                </div>
+                <img class="post-photo" src="../images/philly.jpg" alt="Philadelphia" loading="lazy">
+                <div class="post-body">
+                    <p class="caption"><span class="username">youngresong</span>Philadelphia</p>
+                    <div class="date">Summer 2017</div>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar"><img src="../images/mepic.jpg" alt=""></div>
+                    <div>
+                        <div class="username">youngresong</div>
+                        <div class="location">Québec, Canada</div>
+                    </div>
+                </div>
+                <img class="post-photo landscape" src="../images/quebec.jpg" alt="Quebec" loading="lazy">
+                <div class="post-body">
+                    <p class="caption"><span class="username">youngresong</span>Quebec</p>
+                    <div class="date">Summer 2017</div>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar"><img src="../images/mepic.jpg" alt=""></div>
+                    <div>
+                        <div class="username">youngresong</div>
+                        <div class="location">Asheville, NC</div>
+                    </div>
+                </div>
+                <img class="post-photo landscape" src="../images/asheville.jpg" alt="Asheville" loading="lazy">
+                <div class="post-body">
+                    <p class="caption"><span class="username">youngresong</span>Asheville</p>
+                    <div class="date">Spring 2017</div>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar"><img src="../images/mepic.jpg" alt=""></div>
+                    <div>
+                        <div class="username">youngresong</div>
+                        <div class="location">Myrtle Beach, SC</div>
+                    </div>
+                </div>
+                <img class="post-photo" src="../images/myrtle.jpg" alt="Myrtle Beach" loading="lazy">
+                <div class="post-body">
+                    <p class="caption"><span class="username">youngresong</span>Myrtle Beach</p>
+                    <div class="date">Summer 2016</div>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar"><img src="../images/mepic.jpg" alt=""></div>
+                    <div>
+                        <div class="username">youngresong</div>
+                        <div class="location">Puerto Rico</div>
+                    </div>
+                </div>
+                <img class="post-photo" src="../images/puertorico.jpg" alt="Puerto Rico" loading="lazy">
+                <div class="post-body">
+                    <p class="caption"><span class="username">youngresong</span>Puerto Rico</p>
+                    <div class="date">Summer 2016</div>
+                </div>
+            </article>
+
+        </main>
     </body>
 </html>
