@@ -7,7 +7,48 @@
         <link href="https://fonts.googleapis.com/css?family=Gudea|Rancho" rel="stylesheet"> 
         <link rel="shortcut icon" href="../icons/favicon.ico" /> 
         <style>
-            
+            .profile {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: flex-start;
+                gap: 40px;
+                margin: 0 10%;
+            }
+
+            .profile img {
+                width: 360px;
+                max-width: 40%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+                flex-shrink: 0;
+                border-radius: 4px;
+            }
+
+            .profile .bio {
+                flex: 1;
+            }
+
+            .profile .bio p {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .profile .bio p:first-child {
+                margin-top: 0;
+            }
+
+            @media (max-width: 700px) {
+                .profile {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                .profile img {
+                    width: 100%;
+                    max-width: 400px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -15,9 +56,10 @@
         
         <a href="../index.html" style="text-decoration:none;"><h1 id = "page-title"> ~/youngresong/workspace/me </h1></a>
 
-        <img src="../images/mepic.jpg" alt="me!" style="float: right; margin-right: 10%; margin-left: 15px; margin-bottom: 15px" width="300px">
+        <div class="profile">
+        <img src="../images/mepic3.jpg" alt="me!" width="886" height="886">
 
-        
+        <div class="bio">
         <p id="intro">
             Hi! My name's <span>Young Re</span>, but a lot of people just call me <span>Re</span> (pronounced like Ray). A proud graduate of Duke University (go Blue Devils!) with a degree in Computer Science and Economics, I am currently a software engineer living in Brooklyn, NY. 
         </p>
@@ -33,6 +75,8 @@
         <p>
             And yes, everything on this webpage has been created by yours truly from scratch with bare-bone HTML/CSS - you can peek into the spaghetti <a target="_blank" href="https://github.com/yrsong15/yrsong15.github.io">here.</a> In fact, this whole thing was borne out of my very first Khan Academy exercise, as I hastily attempted to learn JavaScript a week before the beginning of my summer internship!
         </p>
+        </div>
+        </div>
         
     </body>
 </html>
