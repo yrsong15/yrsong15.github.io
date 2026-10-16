@@ -41,9 +41,39 @@
 
         #left-anchor{
             line-height: 400%;
-            width: 70%;
+            width: 90%;
             position: absolute;
-            left:15%;
+            left: 5%;
+        }
+
+        #left-anchor p{
+            display: grid;
+            grid-template-columns: calc(35vw - 0.75em) auto 1fr;
+            column-gap: 0.6em;
+            align-items: baseline;
+        }
+
+        #left-anchor p a{
+            text-align: right;
+        }
+
+        #left-anchor p .desc{
+            text-align: left;
+        }
+
+        @media (max-width: 700px){
+            #left-anchor p{
+                display: block;
+                line-height: 1.6;
+                margin-bottom: 2em;
+            }
+            #left-anchor p .sep{
+                display: none;
+            }
+            #left-anchor p a, #left-anchor p .desc{
+                display: block;
+                text-align: center;
+            }
         }
 
 
@@ -64,13 +94,13 @@
 
         <div id="left-anchor">
 
-        <p><a href="https://github.com/yrsong15/ml-indep-research" target="_blank"> ML Independent Research </a> : Tensorflow estimator to predict wine quality </p>
+        <p><a href="https://github.com/yrsong15/ml-indep-research" target="_blank"> ML Independent Research </a><span class="sep">:</span><span class="desc">Tensorflow estimator to predict wine quality </span></p>
             
-        <p><a href="https://www.hackduke.org/" target="_blank"> HackDuke: Code for Good </a> : 1,000+ person hackathon launched by the HackDuke Team </p>
+        <p><a href="https://www.hackduke.org/" target="_blank"> HackDuke: Code for Good </a><span class="sep">:</span><span class="desc">1,000+ person hackathon launched by the HackDuke Team </span></p>
 
-        <p><a href="" target="_blank"> Project RAPID </a> : Android app that displays open parking spots throughout Duke campus in real time </p>
+        <p><a href="" target="_blank"> Project RAPID </a><span class="sep">:</span><span class="desc">Android app that displays open parking spots throughout Duke campus in real time </span></p>
 
-        <p><a href="https://www.hackduke.org/education/" target="_blank"> Tech Education Series </a> : speaker events designed to raise campus-wide interest in tech industry </p>
+        <p><a href="https://www.hackduke.org/education/" target="_blank"> Tech Education Series </a><span class="sep">:</span><span class="desc">speaker events designed to raise campus-wide interest in tech industry </span></p>
 
         </div>
     
