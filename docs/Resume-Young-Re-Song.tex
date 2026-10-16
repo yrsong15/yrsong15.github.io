@@ -1,0 +1,103 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.75in,top=0.7in,bottom=0.6in]{geometry}
+\usepackage{mathptmx}            % Times-like font, matches the original
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+
+\urlstyle{same}
+\pagestyle{empty}
+\raggedright
+\setlength{\parindent}{0pt}
+
+% Section headings: bold, with a rule underneath
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-0.75em}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{1.1em}{0.2em}
+
+% Bullet lists
+\setlist[itemize]{leftmargin=2.2em,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+
+% \entry{bold title}{plain rest}{date}
+\newcommand{\entry}[3]{\textbf{#1}#2\hfill\textit{#3}\par}
+% \entryurl{bold title}{url}{date}
+\newcommand{\entryurl}[3]{\textbf{#1} {\scriptsize(\url{#2})}\hfill\textit{#3}\par}
+\newcommand{\kw}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+% ---------- Header ----------
+{\LARGE\bfseries Young Re Song}\hfill
+\href{mailto:yrsong15@gmail.com}{yrsong15@gmail.com} $\cdot$ \href{http://yrsong.com/}{http://yrsong.com/}
+
+% ---------- Education ----------
+\section*{Education}
+\entry{Duke University }{(Major GPA: 3.97/4.0, Cumulative: 3.90/4.0)}{May 2018}
+\begin{itemize}
+  \item Bachelor of Science in Computer Science, Minor in Economics
+  \item Honors: \textit{magna cum laude}, Dean's List with Distinction (2015--17), Phi Beta Kappa
+\end{itemize}
+
+% ---------- Work Experience ----------
+\section*{Work Experience}
+\entry{Software Engineer at Bloomberg LP,}{ New York, NY}{Jul 2018 -- present}
+\begin{itemize}
+  \item Current team: Market Analysis -- Analytical Interfaces
+  \item Develop MADI, a platform that expedites complex statistical analysis across multiple asset classes
+  \item \kw{Technical keywords:} C++, Python, comdb2, CI/CD
+\end{itemize}
+\entry{Software Engineering Intern at Bloomberg LP,}{ New York, NY}{Jun -- Aug 2017}
+\begin{itemize}
+  \item Streamlined real-time auditing \& reporting for Bloomberg Media Distribution by deploying middleware API
+  \item Designed intelligent search parser to consolidate client requests and reduce computing overhead
+  \item \kw{Technical keywords:} Node.js, Express, Mocha.js, Elasticsearch
+\end{itemize}
+\entry{Software Engineering Intern at Aqueti Cameras,}{ Chapel Hill, NC}{May -- Aug 2016}
+\begin{itemize}
+  \item Automated network bandwidth evaluation to identify system bottleneck in 16-array gigapixel camera
+  \item Optimized image processing by creating JsonBox app to compute SSD throughput across systems
+  \item \kw{Technical keywords:} C++, Socket/Network Programming, Bash, Unix/Linux
+\end{itemize}
+\entry{Teaching Assistant at Duke Computer Science Department,}{ Durham, NC}{Jan 2016 -- May 2017}
+\entry{Software Engineering Intern at Riot Games,}{ Seoul, Korea}{Jun -- Aug 2015}
+
+% ---------- Project Experience ----------
+\section*{Project Experience}
+\entryurl{Research -- Artificial Intelligence and Machine Learning}{https://github.com/yrsong15/ml-indep-research/}{Jun 2018}
+\begin{itemize}
+  \item Trained \kw{Tensorflow} estimators to predict housing prices/wine quality with linear regression and random forest
+  \item Implemented \kw{reinforcement learning} algorithms that taught agent to reach goal in previously unknown game
+\end{itemize}
+\entryurl{Project RAPID}{https://github.com/yrsong15/DukeParkingAndroid/}{Dec 2016}
+\begin{itemize}
+  \item Co-authored \kw{Android} app with \kw{PostgreSQL} to display real-time parking lot openings around Duke campus
+\end{itemize}
+\entryurl{Research -- Computational Thinking}{http://yrsong.com/docs/Song_Comp_Think.pdf}{Nov 2016}
+\begin{itemize}
+  \item Conducted study on tools, curricula, and impacts of K-12 CS education (Advisor: Owen Astrachan)
+\end{itemize}
+\entryurl{HackDuke Organizing Committee}{https://www.hackduke.org/}{Aug 2015 -- Dec 2016}
+\begin{itemize}
+  \item Taught tutorials on \kw{HTML/CSS}, \kw{Rails}, \kw{SQL}, and product design for 3,000+ entry-level hackers
+\end{itemize}
+
+% ---------- Leadership Experience ----------
+\section*{Leadership Experience}
+\entry{Army Sergeant at ROK CBRN Defense Command,}{ Republic of Korea}{Sep 2013 -- Jun 2015}
+\begin{itemize}
+  \item Led battalion of 90+ personnel in decontamination operations, antiterrorist trainings, and combat exercises
+  \item Awarded Recognition with Distinction by US 20\textsuperscript{th} CBRNECOM CG during ROK-US combined exercise
+\end{itemize}
+\entry{Resident Assistant at Giles Dorm, Duke East Campus,}{ Durham, NC}{Aug 2016 -- May 2018}
+\begin{itemize}
+  \item Hosted events for 120+ first-years including social issue discussions and dinner with Nobel Laureates
+\end{itemize}
+
+% ---------- Skills / Interests ----------
+\section*{Skills / Interests}
+\textbf{Debate:} National Representative in Bickel \& Brewer Public Policy Forum; finished 3\textsuperscript{rd} among 300+ teams\par
+{\rightskip=-0.3in \textbf{Basketball:} Two-time state champion, co-captain of high school varsity team; ardent fan of Duke Basketball and NBA\par}
+
+\end{document}
