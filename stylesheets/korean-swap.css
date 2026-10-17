@@ -1,0 +1,41 @@
+/* A link's English label swaps to its Korean counterpart on hover/focus (desktop) or tap (touch, see js/korean-swap.js).
+   Markup: <a class="ko-swap"><h2><span class="en">Me</span><span class="ko" lang="ko" aria-hidden="true">나</span></h2></a> */
+
+.ko-swap h1,
+.ko-swap h2{
+    display: grid;
+    justify-items: center;
+}
+
+.ko-swap span{
+    grid-area: 1 / 1;
+    font-weight: inherit;
+    color: inherit;
+    transition: opacity 0.2s;
+}
+
+.ko-swap .ko{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 1.15em;
+    opacity: 0;
+}
+
+.ko-swap:focus-visible .en,
+.ko-swap.show-ko .en{
+    opacity: 0;
+}
+
+.ko-swap:focus-visible .ko,
+.ko-swap.show-ko .ko{
+    opacity: 1;
+}
+
+@media (hover: hover){
+    .ko-swap:hover .en{
+        opacity: 0;
+    }
+
+    .ko-swap:hover .ko{
+        opacity: 1;
+    }
+}
