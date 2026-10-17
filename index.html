@@ -7,6 +7,7 @@
 
         <title>Young Re Song</title>
         <link href="https://fonts.googleapis.com/css?family=Gudea|Rancho" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&text=%EB%82%98%EC%97%B0%EA%B5%AC%EC%97%AC%ED%96%89%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" rel="stylesheet">
         <link rel="shortcut icon" href="./icons/favicon.ico" />
 
         <style>
@@ -88,6 +89,43 @@
             }
         }
 
+        /* English label swaps to its Korean counterpart on hover/focus (desktop) or first tap (touch) */
+        .nav-row h2{
+            display: grid;
+            justify-items: center;
+        }
+
+        .nav-row h2 > span{
+            grid-area: 1 / 1;
+            transition: opacity 0.2s;
+        }
+
+        .nav-row .ko{
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 1.15em;
+            opacity: 0;
+        }
+
+        .nav-row > a:focus-visible .en,
+        .nav-row > a.show-ko .en{
+            opacity: 0;
+        }
+
+        .nav-row > a:focus-visible .ko,
+        .nav-row > a.show-ko .ko{
+            opacity: 1;
+        }
+
+        @media (hover: hover){
+            .nav-row > a:hover .en{
+                opacity: 0;
+            }
+
+            .nav-row > a:hover .ko{
+                opacity: 1;
+            }
+        }
+
         .social{
             display: flex;
             justify-content: center;
@@ -106,19 +144,37 @@
 
     <nav class="container">
         <div class="nav-row">
-            <a href="./posts/me.html"><h2> Me </h2></a>
-            <a href="./posts/research.html"><h2> Research </h2></a>
+            <a href="./posts/me.html"><h2><span class="en">Me</span><span class="ko" lang="ko" aria-hidden="true">나</span></h2></a>
+            <a href="./posts/research.html"><h2><span class="en">Research</span><span class="ko" lang="ko" aria-hidden="true">연구</span></h2></a>
         </div>
 
         <div class="nav-row">
-            <a href="./posts/journeys.html"><h2> Journeys </h2></a>
-            <a href="./posts/projects.html"><h2> Projects </h2></a>
+            <a href="./posts/journeys.html"><h2><span class="en">Journeys</span><span class="ko" lang="ko" aria-hidden="true">여행</span></h2></a>
+            <a href="./posts/projects.html"><h2><span class="en">Projects</span><span class="ko" lang="ko" aria-hidden="true">프로젝트</span></h2></a>
         </div>
 
 <!--         <div class="nav-row">
             <a href = "./images/aaa.jpg"><h2> Seungho's Romance </h2></a>
         </div> -->
     </nav>
+
+    <script>
+    // Touch screens have no hover: a tap shows the Korean word briefly, then follows the link.
+    (function(){
+        if (!window.matchMedia('(hover: none)').matches) return;
+        var links = document.querySelectorAll('.nav-row > a');
+        links.forEach(function(link){
+            link.addEventListener('click', function(e){
+                e.preventDefault();
+                link.classList.add('show-ko');
+                setTimeout(function(){ window.location.href = link.href; }, 400);
+            });
+        });
+        window.addEventListener('pageshow', function(){
+            links.forEach(function(l){ l.classList.remove('show-ko'); });
+        });
+    })();
+    </script>
 
     <div class="container social">
         <div>
