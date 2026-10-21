@@ -1,0 +1,84 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.75in,top=0.7in,bottom=0.6in]{geometry}
+\usepackage{mathptmx}            % Times-like font, matches the original
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+
+\urlstyle{same}
+\pagestyle{empty}
+\raggedright
+\setlength{\parindent}{0pt}
+
+% Section headings: bold, with a rule underneath
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-0.75em}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{1.1em}{0.2em}
+
+% Bullet lists
+\setlist[itemize]{leftmargin=2.2em,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+
+% \entry{bold title}{plain rest}{date}
+\newcommand{\entry}[3]{\textbf{#1}#2\hfill\textit{#3}\par}
+% \entryurl{bold title}{url}{date}
+\newcommand{\entryurl}[3]{\textbf{#1} {\scriptsize(\url{#2})}\hfill\textit{#3}\par}
+\newcommand{\kw}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+% ---------- Header ----------
+{\LARGE\bfseries Young Re Song}\hfill
+\href{mailto:me@yrsong.com}{me@yrsong.com} $\cdot$ \href{http://yrsong.com/}{http://yrsong.com/}
+
+% ---------- Career ----------
+\section*{Career}
+\entry{Engineering Team Lead at Bloomberg LP,}{ New York, NY}{May 2026 -- present}
+\begin{itemize}
+  \item Current team: Fixed Income Engineering
+  \item Lead engineers developing \kw{BQL} (Bloomberg Query Language) integrations with fixed income datasets
+\end{itemize}
+\entry{Senior Software Engineer at Bloomberg LP,}{ New York, NY}{Jun 2021 -- May 2026}
+\begin{itemize}
+  \item Team: Equity Screening Engineering
+  \item Developed \kw{BQL} (Bloomberg Query Language) integrations with equity screening datasets
+  \item Developed MAAM (Metadata Assignment, Analysis \& Management)
+\end{itemize}
+\entry{Software Engineer at Bloomberg LP,}{ New York, NY}{Jul 2018 -- Jun 2021}
+\begin{itemize}
+  \item Team: Equity Market Analysis Engineering
+  \item Developed MADI (Managed Analytical Data Interface), a platform that expedites complex statistical analysis across multiple asset classes within the Bloomberg Terminal
+\end{itemize}
+\entry{Software Engineering Intern at Bloomberg LP,}{ New York, NY}{Summer 2017}
+\begin{itemize}
+  \item Designed intelligent parser to integrate search requests for Bloomberg Media Distribution
+\end{itemize}
+\entry{Software Engineering Intern at Aqueti,}{ Chapel Hill, NC}{Summer 2016}
+\entry{Software Engineering Intern at Riot Games,}{ Seoul, Korea}{Summer 2015}
+\entry{Army Sergeant at ROK Armed Forces CBRN Defense Command,}{ South Korea}{Sep 2013 -- Jun 2015}
+\begin{itemize}
+  \item Led battalion of 90+ in decontamination ops, antiterrorist trainings, and combat exercises
+  \item Awarded Recognition with Distinction by US 20\textsuperscript{th} CBRNECOM CG during ROK-US exercise
+\end{itemize}
+
+% ---------- Personal Projects ----------
+\section*{Personal Projects}
+\entryurl{Wedding Website -- laurenyoungre.com}{https://github.com/yrsong15/yrslzwedding}{}
+\begin{itemize}
+  \item \kw{Next.js}/\kw{Supabase} site with RSVPs, admin dashboard, and seating planner
+\end{itemize}
+\entryurl{Running Tracker}{https://github.com/yrsong15/running-tracker}{}
+\begin{itemize}
+  \item \kw{FastAPI} + \kw{React} dashboard of customized running and fitness data
+\end{itemize}
+
+% ---------- Education ----------
+\section*{Education}
+\entry{Duke University }{(GPA: 3.9/4.0)}{May 2018}
+\begin{itemize}
+  \item Bachelor of Science in Computer Science, Minor in Economics
+  \item Honors: \textit{magna cum laude}, Phi Beta Kappa, Dean's List with Distinction
+\end{itemize}
+
+\end{document}
