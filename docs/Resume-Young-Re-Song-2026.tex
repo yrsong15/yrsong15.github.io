@@ -25,6 +25,8 @@
 % \entryurl{bold title}{url}{date}
 \newcommand{\entryurl}[3]{\textbf{#1} {\scriptsize(\url{#2})}\hfill\textit{#3}\par}
 \newcommand{\kw}[1]{\textbf{\textit{#1}}}
+% Extra space between companies/experiences
+\newcommand{\entrysep}{\vspace{6pt}}
 % \role{title}{date}: one position under an \entry company heading, with its bullets in a {roleitems} list
 \newcommand{\role}[2]{\hspace*{1.2em}\textit{#1}\hfill\textit{#2}\par}
 \newenvironment{roleitems}{\begin{itemize}[leftmargin=3.4em]}{\end{itemize}}
@@ -66,8 +68,11 @@
   \item Led a rotating team of engineers conducting on-campus interviews of intern/new hire candidates
   \item Organized all student engagement activities including info sessions, career fairs, and hackathons
 \end{roleitems}
+\entrysep
 \entry{Software Engineering Intern at Aqueti,}{ Chapel Hill, NC}{Summer 2016}
+\entrysep
 \entry{Software Engineering Intern at Riot Games,}{ Seoul, South Korea}{Summer 2015}
+\entrysep
 \entry{Army Sergeant at ROK Armed Forces CBRN Defense Command,}{ South Korea}{Sep 2013 -- Jun 2015}
 \begin{itemize}
   \item Led battalion of 90+ in decontamination ops, antiterrorist trainings, and combat exercises
@@ -80,6 +85,7 @@
 \begin{itemize}
   \item \kw{Next.js}/\kw{Supabase} site with RSVPs, admin dashboard, and seating planner
 \end{itemize}
+\entrysep
 \entryurl{Running Tracker}{https://github.com/yrsong15/running-tracker}{}
 \begin{itemize}
   \item \kw{FastAPI} + \kw{React} dashboard of customized running and fitness data
