@@ -25,6 +25,9 @@
 % \entryurl{bold title}{url}{date}
 \newcommand{\entryurl}[3]{\textbf{#1} {\scriptsize(\url{#2})}\hfill\textit{#3}\par}
 \newcommand{\kw}[1]{\textbf{\textit{#1}}}
+% \role{title}{date}: one position under an \entry company heading, with its bullets in a {roleitems} list
+\newcommand{\role}[2]{\hspace*{1.2em}\textit{#1}\hfill\textit{#2}\par}
+\newenvironment{roleitems}{\begin{itemize}[leftmargin=3.4em]}{\end{itemize}}
 
 \begin{document}
 
@@ -34,28 +37,32 @@
 
 % ---------- Career ----------
 \section*{Career}
-\entry{Engineering Team Lead at Bloomberg LP,}{ New York, NY}{May 2026 -- present}
-\begin{itemize}
+\entry{Bloomberg LP,}{ New York, NY}{}
+\role{Engineering Team Lead}{May 2026 -- present}
+\begin{roleitems}
   \item Current team: Fixed Income Engineering
-  \item Lead engineers developing \kw{BQL} (Bloomberg Query Language) integrations with fixed income datasets
-\end{itemize}
-\entry{Senior Software Engineer at Bloomberg LP,}{ New York, NY}{Jun 2021 -- May 2026}
-\begin{itemize}
+  \item Lead engineers integrating fixed income datasets into \kw{BQL} (Bloomberg Query Language)
+  \item Enable discovery of fixed income datasets through the AI-native \kw{ASKB} platform
+\end{roleitems}
+\role{Senior Software Engineer}{Jun 2021 -- May 2026}
+\begin{roleitems}
   \item Team: Equity Screening Engineering
-  \item Developed \kw{BQL} (Bloomberg Query Language) integrations with equity screening datasets
-  \item Developed MAAM (Metadata Assignment, Analysis \& Management)
-\end{itemize}
-\entry{Software Engineer at Bloomberg LP,}{ New York, NY}{Jul 2018 -- Jun 2021}
-\begin{itemize}
+  \item Integrated equity screening datasets into \kw{BQL} (Bloomberg Query Language)
+  \item Built erised, an automated A/B testing tool for permutations of multiple variables
+  \item Designed MAAM (Metadata Assignment, Analysis \& Management)
+\end{roleitems}
+\role{Software Engineer}{Jul 2018 -- Jun 2021}
+\begin{roleitems}
   \item Team: Equity Market Analysis Engineering
   \item Developed MADI (Managed Analytical Data Interface), a platform that expedites complex statistical analysis across multiple asset classes within the Bloomberg Terminal
-\end{itemize}
-\entry{Software Engineering Intern at Bloomberg LP,}{ New York, NY}{Summer 2017}
-\begin{itemize}
-  \item Designed intelligent parser to integrate search requests for Bloomberg Media Distribution
-\end{itemize}
+\end{roleitems}
+\role{Software Engineering Intern}{Summer 2017}
+\begin{roleitems}
+  \item Team: Media Distribution Engineering
+  \item Designed intelligent parser to integrate search requests for Media Syndication datasets
+\end{roleitems}
 \entry{Software Engineering Intern at Aqueti,}{ Chapel Hill, NC}{Summer 2016}
-\entry{Software Engineering Intern at Riot Games,}{ Seoul, Korea}{Summer 2015}
+\entry{Software Engineering Intern at Riot Games,}{ Seoul, South Korea}{Summer 2015}
 \entry{Army Sergeant at ROK Armed Forces CBRN Defense Command,}{ South Korea}{Sep 2013 -- Jun 2015}
 \begin{itemize}
   \item Led battalion of 90+ in decontamination ops, antiterrorist trainings, and combat exercises
