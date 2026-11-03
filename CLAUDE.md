@@ -17,7 +17,7 @@ Personal site for Young Re Song, served by GitHub Pages at yrsong.com (see `CNAM
   Before changing a style, check whether the page loads a shared sheet, a page-level `<style>` block, or both, and edit the one that actually applies.
 - **Asset paths are relative.** Pages in `posts/` reference `../images/`, `../icons/`, and `../stylesheets/`. Pages in `posts/thoughts/` use `../../`. Keep this in mind when you add or move a page.
 - **Images are pre-resized.** Large photos in `images/` were downsized for page speed. When adding photos, resize them to match (about 1080px wide, or 150px square for avatars) rather than committing full-size originals.
-- **Resume.** `docs/Resume-Young-Re-Song.tex` is the LaTeX source and `docs/Resume-Young-Re-Song.pdf` is the compiled output that the homepage links to. The repo has no build script for the PDF, so regenerate it locally and commit both files together.
+- **Resume.** `docs/Resume-Young-Re-Song-2026.tex` is the LaTeX source and `docs/Resume-Young-Re-Song-2026.pdf` is the compiled output that the homepage links to. The repo has no build script for the PDF, so regenerate it locally (for example, `tectonic Resume-Young-Re-Song-2026.tex` from `docs/`) and commit both files together. The older `docs/Resume-Young-Re-Song.tex`/`.pdf` are no longer linked from any page.
 - **`REVIEW.md`** is an untracked checklist of pending site fixes. Check it before larger cleanups so you don't duplicate or undo work already listed there.
 
 ## Conventions
