@@ -11,16 +11,30 @@
         <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&text=%EB%82%98%EC%97%B0%EA%B5%AC%EC%97%AC%ED%96%89%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8F%8C%EC%95%84%EA%B0%80%EA%B8%B0" rel="stylesheet">
         <link rel="stylesheet" href="../stylesheets/korean-swap.css">
         <script src="../js/korean-swap.js" defer></script>
+        <script>document.documentElement.classList.add('js');</script>
         <style>
+
+        :root {
+            --topbar-h: 72px;
+            --orange: rgb(250, 105, 0);
+            --cyan: rgb(105, 210, 231);
+            --grey: rgb(130, 130, 130);
+        }
 
         *, *::before, *::after {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-padding-top: var(--topbar-h);
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            background: rgb(250, 250, 250);
-            color: rgb(38, 38, 38);
+            background: white;
+            color: var(--orange);
             font-family: 'Gudea', sans-serif;
         }
 
@@ -29,115 +43,180 @@
             text-decoration: none;
         }
 
-        /* Top bar */
+        /* Title */
         .topbar {
             position: sticky;
             top: 0;
-            z-index: 10;
+            z-index: 20;
+            height: var(--topbar-h);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: white;
-            border-bottom: 1px solid rgb(219, 219, 219);
-            text-align: center;
-            padding: 10px 16px;
+            padding: 0 16px;
+        }
+
+        .topbar a {
+            min-width: 0;
+            max-width: 100%;
         }
 
         #page-title {
             margin: 0;
-            color: rgb(250, 105, 0);
+            color: var(--orange);
             font-family: 'Rancho', cursive;
-            font-size: 2em;
+            font-size: clamp(1.1em, 5vw, 1.5em);
             font-weight: normal;
-        }
-
-        #page-title:hover {
-            color: rgb(105, 210, 231);
-        }
-
-        /* Feed */
-        .feed {
-            max-width: 470px;
-            margin: 0 auto;
-            padding: 24px 0 60px;
-        }
-
-        .post {
-            background: white;
-            border: 1px solid rgb(219, 219, 219);
-            border-radius: 8px;
-            margin-bottom: 24px;
-            overflow: hidden;
-        }
-
-        .post-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 14px;
-        }
-
-        .avatar {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            padding: 2px;
-            background: linear-gradient(45deg, rgb(250, 105, 0), rgb(243, 134, 48), rgb(105, 210, 231));
-            flex-shrink: 0;
-        }
-
-        .avatar img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 2px solid white;
-            object-fit: cover;
-        }
-
-        .username {
-            font-weight: bold;
-            font-size: 0.95em;
             line-height: 1.2;
         }
 
-        .location {
-            font-size: 0.8em;
-            color: rgb(115, 115, 115);
+        #page-title span {
+            min-width: 0;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .post-photo {
+        #page-title:hover {
+            color: var(--cyan);
+        }
+
+        /* Slides */
+        .slide {
+            height: calc(100vh - var(--topbar-h));
+            height: calc(100svh - var(--topbar-h));
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 56px 24px;
+        }
+
+        figure {
+            margin: 0;
+            width: min(100%, 900px, calc((100vh - var(--topbar-h) - 110px) * 4 / 3));
+            width: min(100%, 900px, calc((100svh - var(--topbar-h) - 110px) * 4 / 3));
+        }
+
+        /* Every photo shares the same 4:3 frame, the shape of the landscape shots.
+           Portrait photos sit in the middle; each side of the frame is filled with
+           the color sampled from that edge of the photo (--fill-l / --fill-r). */
+        .frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: linear-gradient(to right,
+                var(--fill-l, rgb(239, 239, 239)) 50%,
+                var(--fill-r, rgb(239, 239, 239)) 50%);
+        }
+
+        .frame img {
+            position: absolute;
+            inset: 0;
             display: block;
             width: 100%;
-            aspect-ratio: 4 / 5;
+            height: 100%;
+        }
+
+        .photo {
             object-fit: cover;
-            background: rgb(239, 239, 239);
         }
 
-        .post-photo.landscape {
-            aspect-ratio: 4 / 3;
+        .photo.portrait {
+            object-fit: contain;
         }
 
-        .post-body {
-            padding: 10px 14px 14px;
+
+        .caption {
+            padding-top: 12px;
+        }
+
+        .place {
+            font-weight: bold;
+            font-size: 1.05em;
+            color: var(--orange);
+        }
+
+        .when {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            color: var(--grey);
             font-size: 0.95em;
         }
 
-        .caption {
-            margin: 0;
+        html.js .caption {
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        .caption .username {
-            margin-right: 6px;
+        html.js .slide.in-view .caption {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Side progress dots */
+        .dots {
+            position: fixed;
+            right: 12px;
+            top: calc(var(--topbar-h) + (100vh - var(--topbar-h)) / 2);
+            top: calc(var(--topbar-h) + (100svh - var(--topbar-h)) / 2);
+            transform: translateY(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dots a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 28px;
+        }
+
+        .dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
+            background: rgb(210, 210, 210);
+            transition: height 0.3s ease, background-color 0.3s ease;
+        }
+
+        .dots a:hover span {
+            background: var(--cyan);
+        }
+
+        .dots a.active span {
+            height: 14px;
+            background: var(--orange);
         }
 
         @media (max-width: 500px) {
-            .feed {
-                padding-top: 0;
+            .slide {
+                padding: 0 36px 16px 16px;
             }
 
-            .post {
-                border-left: none;
-                border-right: none;
-                border-radius: 0;
-                margin-bottom: 12px;
+            .dots {
+                right: 4px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            html.js .caption,
+            .dots span {
+                transition: none;
+            }
+
+            html.js .caption {
+                transform: none;
             }
         }
 
@@ -148,134 +227,152 @@
             <a class="ko-swap" href="../index.html"><h1 id="page-title"><span class="en">~/youngresong/workspace/journeys</span><span class="ko" lang="ko" aria-hidden="true">돌아가기</span></h1></a>
         </header>
 
-        <main class="feed">
+        <main class="story">
 
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar"><img src="../images/mepic-avatar.jpg" alt=""></div>
-                    <div>
-                        <div class="username">youngresong</div>
-                        <div class="location">Snowbasin Resort, UT</div>
+            <section class="slide" id="slide-1">
+                <figure>
+                    <div class="frame">
+                        <img class="photo" src="../images/snowbasin.jpg" alt="Snowbasin Resort" loading="eager">
                     </div>
-                </div>
-                <img class="post-photo landscape" src="../images/snowbasin.jpg" alt="Snowbasin Resort" loading="lazy">
-                <div class="post-body">
-                    <p class="caption"><span class="username">youngresong</span>Winter 2021</p>
-                </div>
-            </article>
+                    <figcaption class="caption">
+                        <div class="place">Snowbasin Resort, UT</div>
+                        <div class="when">Winter 2021<span class="count">1 / 9</span></div>
+                    </figcaption>
+                </figure>
+            </section>
 
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar"><img src="../images/mepic-avatar.jpg" alt=""></div>
-                    <div>
-                        <div class="username">youngresong</div>
-                        <div class="location">Glacier National Park, MT</div>
+            <section class="slide" id="slide-2">
+                <figure>
+                    <div class="frame">
+                        <img class="photo" src="../images/glacier.jpg" alt="Glacier National Park" loading="lazy">
                     </div>
-                </div>
-                <img class="post-photo landscape" src="../images/glacier.jpg" alt="Glacier National Park" loading="lazy">
-                <div class="post-body">
-                    <p class="caption"><span class="username">youngresong</span>Summer 2019</p>
-                </div>
-            </article>
+                    <figcaption class="caption">
+                        <div class="place">Glacier National Park, MT</div>
+                        <div class="when">Summer 2019<span class="count">2 / 9</span></div>
+                    </figcaption>
+                </figure>
+            </section>
 
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar"><img src="../images/mepic-avatar.jpg" alt=""></div>
-                    <div>
-                        <div class="username">youngresong</div>
-                        <div class="location">Grand Teton National Park, WY</div>
+            <section class="slide" id="slide-3">
+                <figure>
+                    <div class="frame">
+                        <img class="photo" src="../images/grand-teton.jpg" alt="Grand Teton National Park" loading="lazy">
                     </div>
-                </div>
-                <img class="post-photo landscape" src="../images/grand-teton.jpg" alt="Grand Teton National Park" loading="lazy">
-                <div class="post-body">
-                    <p class="caption"><span class="username">youngresong</span>Summer 2018</p>
-                </div>
-            </article>
+                    <figcaption class="caption">
+                        <div class="place">Grand Teton National Park, WY</div>
+                        <div class="when">Summer 2018<span class="count">3 / 9</span></div>
+                    </figcaption>
+                </figure>
+            </section>
 
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar"><img src="../images/mepic-avatar.jpg" alt=""></div>
-                    <div>
-                        <div class="username">youngresong</div>
-                        <div class="location">Cherry Springs, PA</div>
+            <section class="slide" id="slide-4">
+                <figure>
+                    <div class="frame" style="--fill-l: rgb(101, 119, 136); --fill-r: rgb(69, 96, 129);">
+                        <img class="photo portrait" src="../images/cherrysprings.jpg" alt="Cherry Springs" loading="lazy">
                     </div>
-                </div>
-                <img class="post-photo" src="../images/cherrysprings.jpg" alt="Cherry Springs" loading="lazy">
-                <div class="post-body">
-                    <p class="caption"><span class="username">youngresong</span>Winter 2017</p>
-                </div>
-            </article>
+                    <figcaption class="caption">
+                        <div class="place">Cherry Springs, PA</div>
+                        <div class="when">Winter 2017<span class="count">4 / 9</span></div>
+                    </figcaption>
+                </figure>
+            </section>
 
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar"><img src="../images/mepic-avatar.jpg" alt=""></div>
-                    <div>
-                        <div class="username">youngresong</div>
-                        <div class="location">Los Angeles, CA</div>
+            <section class="slide" id="slide-5">
+                <figure>
+                    <div class="frame" style="--fill-l: rgb(105, 106, 105); --fill-r: rgb(53, 63, 80);">
+                        <img class="photo portrait" src="../images/la.jpg" alt="LA" loading="lazy">
                     </div>
-                </div>
-                <img class="post-photo" src="../images/la.jpg" alt="LA" loading="lazy">
-                <div class="post-body">
-                    <p class="caption"><span class="username">youngresong</span>Fall 2017</p>
-                </div>
-            </article>
+                    <figcaption class="caption">
+                        <div class="place">Los Angeles, CA</div>
+                        <div class="when">Fall 2017<span class="count">5 / 9</span></div>
+                    </figcaption>
+                </figure>
+            </section>
 
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar"><img src="../images/mepic-avatar.jpg" alt=""></div>
-                    <div>
-                        <div class="username">youngresong</div>
-                        <div class="location">Philadelphia, PA</div>
+            <section class="slide" id="slide-6">
+                <figure>
+                    <div class="frame" style="--fill-l: rgb(63, 162, 213); --fill-r: rgb(52, 148, 197);">
+                        <img class="photo portrait" src="../images/philly.jpg" alt="Philadelphia" loading="lazy">
                     </div>
-                </div>
-                <img class="post-photo" src="../images/philly.jpg" alt="Philadelphia" loading="lazy">
-                <div class="post-body">
-                    <p class="caption"><span class="username">youngresong</span>Summer 2017</p>
-                </div>
-            </article>
+                    <figcaption class="caption">
+                        <div class="place">Philadelphia, PA</div>
+                        <div class="when">Summer 2017<span class="count">6 / 9</span></div>
+                    </figcaption>
+                </figure>
+            </section>
 
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar"><img src="../images/mepic-avatar.jpg" alt=""></div>
-                    <div>
-                        <div class="username">youngresong</div>
-                        <div class="location">Québec, Canada</div>
+            <section class="slide" id="slide-7">
+                <figure>
+                    <div class="frame">
+                        <img class="photo" src="../images/quebec.jpg" alt="Quebec" loading="lazy">
                     </div>
-                </div>
-                <img class="post-photo landscape" src="../images/quebec.jpg" alt="Quebec" loading="lazy">
-                <div class="post-body">
-                    <p class="caption"><span class="username">youngresong</span>Summer 2017</p>
-                </div>
-            </article>
+                    <figcaption class="caption">
+                        <div class="place">Québec, Canada</div>
+                        <div class="when">Summer 2017<span class="count">7 / 9</span></div>
+                    </figcaption>
+                </figure>
+            </section>
 
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar"><img src="../images/mepic-avatar.jpg" alt=""></div>
-                    <div>
-                        <div class="username">youngresong</div>
-                        <div class="location">Asheville, NC</div>
+            <section class="slide" id="slide-8">
+                <figure>
+                    <div class="frame">
+                        <img class="photo" src="../images/asheville.jpg" alt="Asheville" loading="lazy">
                     </div>
-                </div>
-                <img class="post-photo landscape" src="../images/asheville.jpg" alt="Asheville" loading="lazy">
-                <div class="post-body">
-                    <p class="caption"><span class="username">youngresong</span>Spring 2017</p>
-                </div>
-            </article>
+                    <figcaption class="caption">
+                        <div class="place">Asheville, NC</div>
+                        <div class="when">Spring 2017<span class="count">8 / 9</span></div>
+                    </figcaption>
+                </figure>
+            </section>
 
-            <article class="post">
-                <div class="post-header">
-                    <div class="avatar"><img src="../images/mepic-avatar.jpg" alt=""></div>
-                    <div>
-                        <div class="username">youngresong</div>
-                        <div class="location">Puerto Rico</div>
+            <section class="slide" id="slide-9">
+                <figure>
+                    <div class="frame" style="--fill-l: rgb(45, 52, 45); --fill-r: rgb(96, 96, 74);">
+                        <img class="photo portrait" src="../images/puerto-rico-beach.jpg" alt="Puerto Rico" loading="lazy">
                     </div>
-                </div>
-                <img class="post-photo" src="../images/puerto-rico-beach.jpg" alt="Puerto Rico" loading="lazy">
-                <div class="post-body">
-                    <p class="caption"><span class="username">youngresong</span>Summer 2016</p>
-                </div>
-            </article>
+                    <figcaption class="caption">
+                        <div class="place">Puerto Rico</div>
+                        <div class="when">Summer 2016<span class="count">9 / 9</span></div>
+                    </figcaption>
+                </figure>
+            </section>
 
         </main>
+
+        <nav class="dots" aria-label="Photos">
+            <a href="#slide-1" aria-label="Snowbasin Resort, UT, Winter 2021"><span></span></a>
+            <a href="#slide-2" aria-label="Glacier National Park, MT, Summer 2019"><span></span></a>
+            <a href="#slide-3" aria-label="Grand Teton National Park, WY, Summer 2018"><span></span></a>
+            <a href="#slide-4" aria-label="Cherry Springs, PA, Winter 2017"><span></span></a>
+            <a href="#slide-5" aria-label="Los Angeles, CA, Fall 2017"><span></span></a>
+            <a href="#slide-6" aria-label="Philadelphia, PA, Summer 2017"><span></span></a>
+            <a href="#slide-7" aria-label="Québec, Canada, Summer 2017"><span></span></a>
+            <a href="#slide-8" aria-label="Asheville, NC, Spring 2017"><span></span></a>
+            <a href="#slide-9" aria-label="Puerto Rico, Summer 2016"><span></span></a>
+        </nav>
+
+        <script>
+        (function () {
+            var dots = document.querySelectorAll('.dots a');
+            if (!('IntersectionObserver' in window)) {
+                document.querySelectorAll('.slide').forEach(function (s) { s.classList.add('in-view'); });
+                return;
+            }
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    entry.target.classList.toggle('in-view', entry.isIntersecting);
+                    if (!entry.isIntersecting) return;
+                    var href = '#' + entry.target.id;
+                    dots.forEach(function (dot) {
+                        var on = dot.getAttribute('href') === href;
+                        dot.classList.toggle('active', on);
+                        if (on) dot.setAttribute('aria-current', 'true');
+                        else dot.removeAttribute('aria-current');
+                    });
+                });
+            }, { threshold: 0.6 });
+            document.querySelectorAll('.slide').forEach(function (s) { observer.observe(s); });
+        })();
+        </script>
     </body>
 </html>
